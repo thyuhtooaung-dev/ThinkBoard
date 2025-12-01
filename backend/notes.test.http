@@ -1,0 +1,30 @@
+@id = 6929493a31729ae528a61b2b
+
+// Get all notes
+GET localhost:8000/api/notes
+
+###
+// Get one note by ID
+GET localhost:8000/api/notes/{{id}}
+
+###
+// Create a new note
+POST localhost:8000/api/notes
+Content-Type: application/json
+
+{
+  "title" : "will delete later",
+  "content" : "DELETE"
+}
+
+###
+// Update a note
+PUT localhost:8000/api/notes/{{id}}
+Content-Type: application/json
+
+{
+  "title": "Updated title"
+}
+
+###
+DELETE localhost:8000/api/notes/{{id}}
